@@ -1,0 +1,116 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+button {
+  background-color: #000;
+  border: 0;
+  border-radius: 40px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+}
+
+img {
+  width: 100px;
+}
+
+select {
+  border-radius: 40px;
+  padding: 4px;
+  width: 125px;
+  -webkit-appearance: none;
+}
+
+.custom-arrow img {
+  width: 33px;
+  height: 33px;
+  position: relative;
+  top: 12px;
+  right: 25px;
+}
+
+.device {
+  border: 1px solid #000;
+  -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  margin: 5% auto;
+  text-align: center;
+  width: 700px;
+}
+
+.device__box {
+  background: #000;
+  color: #fff;
+  width: 700px;
+}
+
+.device__header {
+  margin-top: 0;
+  padding: 7px 0;
+  text-align: center;
+}
+
+.device__section2 {
+  padding: 20px;
+}
+
+.device__standard-select {
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+.device__select {
+  margin: 10px 20px 30px;
+}
+
+.device__models {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px;
+}
+
+.device__button {
+  margin: 0 4% 4%;
+}
+
+.card {
+  border: 1px solid black;
+  -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  margin: auto 6px;
+  position: relative;
+  width: calc(20%);
+}
+
+.card__text {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 1px;
+}
+
+.card__text:hover {
+  background-color: rgba(60, 179, 113, 0.8);
+}
+
+.card__text p {
+  margin: 3px 1px;
+}
+/*# sourceMappingURL=style.css.map */
