@@ -12,11 +12,10 @@
 
 <body>
   <div class="device">
-    <div class="device__box">
-      <h1 class="device__header">Phone Finder</h1>
-    </div>
-    <!-- Brand selector -->
-    <div class="device__section2">
+    <div class="device__header">
+      <h1 class="device__title">Phone Finder</h1>
+      <!-- Brand selector -->
+      <!-- I think your class names are on the whole pretty good! But the more descriptive the better, in this case I would have maybe called this device__select-label -->
       <label class="device__standard-select">Select your phone brand</label>
       <div class="device__select">
         <select>
@@ -25,45 +24,47 @@
           <option value="Option 3">Samsung</option>
           <option value="Option 4">Google</option>
         </select>
-        <span class = "custom-arrow"><img src="./img/dropdown.png" alt="arrow"></span>
+        <!-- <span class = "custom-arrow"><img src="./img/dropdown.png" alt="arrow"></span> -->
       </div>
-      <!-- Phone selector -->
-      <h2>Select your phone model </h2>
-      <div class="device__models">
-        <!-- Item 1 -->
-        <div class="card" onmouseover="changeBg(this,'MediumSeaGreen')" onmouseout ="changeBg(this,'black')" >
-          <img src="./img/iphone.png" alt="iphone" class="card__image">
-          <div class="card__text">
-            <p>iPhone 8</p>
-          </div>
+    </div>
+    <!-- Phone selector -->
+    <h2>Select your phone model </h2>
+    <div class="device__models">
+      <!-- Item 1 -->
+      <!-- In keeping with BEM class names, if the block is called device__models perhaps each of these would make sense as device__model and then inside
+      you could have device__model-image device__model-text, although I think card makes complete sense for these elements -->
+      <div class="card" onmouseover="changeBg(this,'MediumSeaGreen')" onmouseout ="changeBg(this,'black')" >
+        <img src="./img/iphone.png" alt="iphone" class="card__image">
+        <div class="card__text">
+          <p>iPhone 8</p>
         </div>
-        <!-- Item 2 -->
-        <div class="card" onmouseover="changeBg(this,'MediumSeaGreen')" onmouseout ="changeBg(this,'black')">
-          <img src="./img/iphone.png" alt="iphone" class="card__image">
-          <div class="card__text">
-            <p>iPhone 8</p>
-          </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="card" onmouseover="changeBg(this,'MediumSeaGreen')" onmouseout ="changeBg(this,'black')">
+        <img src="./img/iphone.png" alt="iphone" class="card__image">
+        <div class="card__text">
+          <p>iPhone 8</p>
         </div>
-        <!-- Item 3 -->
-        <div class="card" onmouseover="changeBg(this,'MediumSeaGreen')" onmouseout ="changeBg(this,'black')">
-          <img src="./img/iphone.png" alt="iphone" class="card__image">
-          <div class="card__text">
-            <p>iPhone 8</p>
-          </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="card" onmouseover="changeBg(this,'MediumSeaGreen')" onmouseout ="changeBg(this,'black')">
+        <img src="./img/iphone.png" alt="iphone" class="card__image">
+        <div class="card__text">
+          <p>iPhone 8</p>
         </div>
-        <!-- Item 4 -->
-        <div class="card" onmouseover="changeBg(this,'MediumSeaGreen')" onmouseout ="changeBg(this,'black')" >
-          <img src="./img/iphone.png" alt="iphone" class="card__image">
-          <div class="card__text">
-            <p>iPhone 8</p>
-          </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="card" onmouseover="changeBg(this,'MediumSeaGreen')" onmouseout ="changeBg(this,'black')" >
+        <img src="./img/iphone.png" alt="iphone" class="card__image">
+        <div class="card__text">
+          <p>iPhone 8</p>
         </div>
-        <!-- Item 5 -->
-        <div class="card" onmouseover="changeBg(this,'MediumSeaGreen')" onmouseout ="changeBg(this,'black')" >
-          <img src="./img/iphone.png" alt="iphone" class="card__image">
-          <div class="card__text">
-            <p>iPhone 8</p>
-          </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="card" onmouseover="changeBg(this,'MediumSeaGreen')" onmouseout ="changeBg(this,'black')" >
+        <img src="./img/iphone.png" alt="iphone" class="card__image">
+        <div class="card__text">
+          <p>iPhone 8</p>
         </div>
       </div>
     </div>
