@@ -29,18 +29,47 @@ img {
 
 select {
   border-radius: 40px;
-  padding: 4px;
-  width: 125px;
+  /* Increased the right hand panding to make space for the arrow using the padding shorthand */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/padding */
+  padding: 4px 25px 4px 4px;
+  /* It's better not to strict with on elements with text in them, you want them to be able to flex to the size of the text, use padding to add any extra space */
+  /* width: 125px; */ 
   -webkit-appearance: none;
+  position: relative;
+  /* Made transparent so you can see the arrow through it */
+  background: transparent;
 }
 
-.custom-arrow img {
+.device__select {
+  position: relative;
+  display: inline-block;
+}
+
+/* You can use psuedo elements to add extra content. In this case, I added a before to the div surrounding the select. I used a before because that
+places it "underneath" the element. Placing it on top of the element using an after meant that if I clicked on the arrow that click event didn't bubble down 
+to the actual select and nothing happened. With it underneath, I can make the background of the select element transparent so you can see the arrow but when you click
+where the arrow is the dropdown still works. Have a play around with after & before and changing the background of the select element to see what I mean! */
+/* You can read more here https://css-tricks.com/pseudo-class-selectors/ */
+.device__select::before {
+  content: "";
+  background-image: url('../img/dropdown.png');
+  background-size: contain;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 0;
+  right: -1px;
+  display: inline-block;
+}
+
+/* Moved dropdown arrow to a pseudo element, see above */
+/* .custom-arrow img {
   width: 33px;
   height: 33px;
   position: relative;
   top: 12px;
   right: 25px;
-}
+} */
 
 .device {
   border: 1px solid #000;
@@ -51,21 +80,32 @@ select {
   width: 700px;
 }
 
-.device__box {
-  background: #000;
-  color: #fff;
-  width: 700px;
-}
-
+/* I used flexbox to line up all the items in the header as I wanted, this is widely used in CSS these days so great to get the hang of
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://flexboxfroggy.com/ */
 .device__header {
   margin-top: 0;
-  padding: 7px 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.device__section2 {
-  padding: 20px;
+.device__title {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  width: 100%;
 }
+
+/* I restructured the HTML a little bit to put the title and select buttons inside a header block (kind of just personal preference) but I could have left it as you had 
+it and just changed this class name to be device__body, device__section2 is a little misleading as there isn't a device__section1 and it doesn't tell us very
+much about the content */
+/* .device__section2 {
+  padding: 20px;
+} */
 
 .device__standard-select {
   font-size: 1.1rem;

@@ -1,3 +1,5 @@
+$box-shadow-light: rgba(0,0,0,0.15);
+
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
@@ -31,6 +33,7 @@ select {
     padding: 4px;
     width: 125px;
     -webkit-appearance: none;
+    border: 1px solid red;
 }
 
 // code for custom button selector
@@ -42,9 +45,16 @@ select {
     right: 25px;
 }
 
+
+// One of the most useful things about SASS is the variables, this is a small CSS file so not strictly necessary but if you were working on a large code base
+// and you used rgba(0,0,0,0.15) in a lot of places you'd give yourself a hard job if one day all of those places had to be rgba(0,0,0,0.5) or if someone changed 
+// just one expecting that to be it and then they all got out of sync. Using SASS variables means you'd only have to change them in one place
+
+// I added one at the top of this file called $box-shadow-light as an example
+// https://sass-lang.com/documentation/variables
 .device {
     border: 1px solid #000;
-    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 4px 10px 0px $box-shadow-light;
     margin: 5% auto;
     text-align: center;
     width: 700px;
@@ -87,7 +97,7 @@ select {
 
 .card {
     border: 1px solid black;
-    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 4px 4px 10px 0px $box-shadow-light;
     margin: auto 6px;
     position: relative;
     width: calc(20%);
